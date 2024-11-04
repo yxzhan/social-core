@@ -286,8 +286,8 @@ class SAMLAuth(BaseAuth):
             "idp": idp_name,
             "next": self.data.get("next"),
         }
-        # return auth.login(return_to=json.dumps(relay_state))
-        return auth.login()
+        return auth.login(return_to='/')
+        # return auth.login()
   
 
     def get_user_details(self, response):
